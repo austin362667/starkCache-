@@ -101,8 +101,8 @@ def main(argv):
 						question = q['question']
 						text = p['context']
 
-						if len(text)>470:
-							text = text[:470]
+						if len(text)>450:
+							text = text[:450]
 
 						encoding = tokenizer.encode_plus(question, text)
 						input_ids, token_type_ids = encoding["input_ids"], encoding["token_type_ids"]
@@ -143,8 +143,8 @@ def main(argv):
 				question = q['QTEXT'][2:]
 				text = d['DTEXT']
 
-				if len(text)>470:
-					text = text[:470]
+				if len(text)>450:
+					text = text[:450]
 
 				encoding = tokenizer.encode_plus(question, text)
 				input_ids, token_type_ids = encoding["input_ids"], encoding["token_type_ids"]
@@ -189,8 +189,8 @@ def main(argv):
 				question = q['QTEXT'][2:]
 				text = d['DTEXT']
 
-				if len(text)>470:
-					text = text[:470]
+				if len(text)>450:
+					text = text[:450]
 
 
 				encoding = tokenizer.encode_plus(question, text)
