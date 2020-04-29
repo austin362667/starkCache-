@@ -77,10 +77,12 @@ def main(argv):
 	def find_sub_list(sl,l):
 	    results=[]
 	    sll=len(sl)
-	    for ind in (i for i,e in enumerate(l) if e==sl[0]):
-	        if l[ind:ind+sll]==sl:
-	            results.append((ind,ind+sll-1))
-
+	    try:
+		    for ind in (i for i,e in enumerate(l) if e==sl[0]):
+		        if l[ind:ind+sll]==sl:
+		            results.append((ind,ind+sll-1))
+        except IndexError:
+        	results=[]
 	    return results
 
 	for e in range(epoch):
