@@ -62,10 +62,10 @@ def main(argv):
 		ans_lstA.append(a["ANSWER"])
 
 
-	tokenizer = BertTokenizer.from_pretrained('hfl/chinese-roberta-wwm-ext-large')
+	tokenizer = BertTokenizer.from_pretrained('hfl/chinese-roberta-wwm-ext')
 	#model = BertForQuestionAnswering.from_pretrained('bert-base-chinese')
 	# model = torch.load("AI1.pkl")#.pkl
-	model = BertForQuestionAnswering.from_pretrained('hfl/chinese-roberta-wwm-ext-large')#.bin
+	model = BertForQuestionAnswering.from_pretrained('hfl/chinese-roberta-wwm-ext')#.bin
 
 	device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 	print("device:", device)
